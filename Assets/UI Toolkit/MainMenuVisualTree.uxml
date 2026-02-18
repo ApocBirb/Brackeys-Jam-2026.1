@@ -1,8 +1,14 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/StyleSheets/MainMenu.uss?fileID=7433441132597879392&amp;guid=ef3541bdfe7e8634d91c339f3d062697&amp;type=3#MainMenu"/>
-    <ui:VisualElement name="Container" style="flex-grow: 1;">
-        <ui:Button text="Play" name="Play_Button" class="button" style="margin-top: 450px;"/>
-        <ui:Button text="Settings" name="Settings_Button" class="button"/>
-        <ui:Button text="Exit" name="Exit_Button" class="button"/>
+    <ui:VisualElement name="Menu_Container" style="flex-grow: 1; width: 100%; height: 100px;">
+        <ui:VisualElement name="Main_Menu_Container" style="flex-grow: 1; position: absolute; top: 0%; left: 0%; bottom: 0%; right: 0%; display: none;">
+            <ui:Button text="Play" name="Play_Button" class="button" style="margin-top: 450px;"/>
+            <ui:Button text="Settings" name="Settings_Button" class="button"/>
+            <ui:Button text="Exit" name="Exit_Button" class="button"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="Settings_Container" style="flex-grow: 1; position: absolute; top: 0%; left: 0%; bottom: 0%; right: 0%; visibility: visible; display: flex; align-items: center; justify-content: center;">
+            <ui:Slider label="Volume" value="42" high-value="1" name="Volume_Slider" class="slider"/>
+            <ui:Button text="Back&#10;" name="Settings_Back_Button" class="button"/>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
